@@ -96,8 +96,8 @@ void SendDword(dword num)
 }
 
 
-
 extern void sdram_init();
+extern void SD_Init();
 void Main()
 {
 	deref(0x7e200008) = (deref(0x7e200008)&(~(7<<0)))|(1<<0);
@@ -106,7 +106,7 @@ void Main()
 
 	sdram_init();
 	
-	
+	SD_Init();
 	
 	
 	while(1)

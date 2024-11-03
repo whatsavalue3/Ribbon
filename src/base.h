@@ -1,5 +1,6 @@
 #pragma once
 
+typedef unsigned long long qword;
 typedef unsigned int dword;
 typedef unsigned short word;
 typedef unsigned char byte;
@@ -20,6 +21,8 @@ typedef unsigned char u8;
 #endif
 
 #define ALWAYS_INLINE __attribute__((always_inline)) inline
+
+#define PACKED __attribute__((packed))
 
 extern void SendString(const char* str);
 extern void SendDword(dword num);
